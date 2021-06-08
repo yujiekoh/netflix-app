@@ -3,6 +3,7 @@
 import styled from "styled-components/macro";
 
 // You can style any element you want - div, section, p, h1 etc. In the template literal, you write regular CSS
+// You can leave the template literal empty if you do not want to pass any CSS
 
 // Here's what you want to achieve in your jumbotron:
 // The text and image for each row should alternate. In the first row, the image is on the right, the text is on the left.
@@ -11,6 +12,7 @@ import styled from "styled-components/macro";
 export const Inner = styled.div`
   display: flex;
   align-items: center;
+  /* destructure the prop you are passing down from the Inner component in index.js in flex-direction */
   flex-direction: ${({ direction }) => direction};
   justify-content: space-between;
   max-width: 1100px;
@@ -20,5 +22,6 @@ export const Inner = styled.div`
   @media (max-width: 1000px) {
       flex-direction: column;
   }
-  
 `;
+
+export const Container = styled.div``;
